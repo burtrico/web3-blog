@@ -5,11 +5,9 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-
 // This contract allows the owner to create and edit posts, and for anyone to fetch posts.
 // To make this smart contract permissionless, you could remove the onlyOwner modifier and 
 // use The Graph to index and query posts by owner.
-
 
 contract Blog {
     string public name;

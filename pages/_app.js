@@ -13,6 +13,7 @@ import 'easymde/dist/easymde.min.css'
 function MyApp({ Component, pageProps }) {
   /* create local state to save account information after signin */
   const [account, setAccount] = useState(null)
+  
   /* web3Modal configuration for enabling wallet access */
   async function getWeb3Modal() {
     const web3Modal = new Web3Modal({
