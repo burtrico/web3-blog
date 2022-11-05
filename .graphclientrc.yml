@@ -1,0 +1,8 @@
+sources:
+  - name: blogcms
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/burtrico/blogcms
+
+documents:
+  - ./queries/postsQuery.graphql
