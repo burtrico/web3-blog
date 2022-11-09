@@ -1,11 +1,11 @@
 // we import types and typed-graphql document from the generated code (`..graphclient/`)
-import { ExampleQueryDocument, ExampleQueryQuery, execute } from '../.graphclient'
+import { postsDocument, postsQuery, execute } from '../.graphclient'
 
 export default function showQuery() {
-  const [result, setResult] = React.useState<ExampleQueryQuery>()
+  const [result, setResult] = React.useState<postsQuery>()
 
   useEffect(() => {
-    execute(ExampleQueryDocument, {}).then((result) => {
+    execute(postsDocument, {}).then((result) => {
       setData(result?.data)
     })
   }, [setResult])
@@ -13,7 +13,7 @@ export default function showQuery() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Graph Client Example</p>
+        <p>Graph Client Posts</p>
         <fieldset>
           {data && (
             <form>
